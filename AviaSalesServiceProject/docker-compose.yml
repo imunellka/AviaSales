@@ -1,0 +1,12 @@
+version: "3"
+services:
+    avia_sales-microservice:
+        image: postgres
+        restart: always
+        container_name: order-handler-microservice-local
+        environment:
+            POSTGRES_USER: "postgres"
+            POSTGRES_DB: "avia_sales"
+            POSTGRES_PASSWORD: "123456"
+        ports:
+            - 15432:5432
